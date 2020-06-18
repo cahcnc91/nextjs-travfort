@@ -27,6 +27,7 @@ export default function Layout({ children, home }) {
           rel="stylesheet"
           type="text/css"
         />
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
       </Head>
       <HeroSection></HeroSection>
       <main>{children}</main>
