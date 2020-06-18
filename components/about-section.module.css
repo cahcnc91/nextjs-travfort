@@ -1,0 +1,44 @@
+/*  -------------------------------*/
+/* -------------FEATURES------------*/
+/*---------------------------------*/
+
+.boxFeatures {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.p {
+    line-height: 145%;
+    margin-bottom: 30px;
+}
+
+.colBox {
+    width: 23%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.colBox:first-child {
+    margin-left: 0;
+}
+
+.colBox:last-child {
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .boxFeatures {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .colBox {
+        width: 100%;
+        margin: 1%;
+        padding-top: 1rem;
+    }
+}
