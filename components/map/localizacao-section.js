@@ -69,7 +69,7 @@ export default class LocalizacaoSection extends Component {
           {/* 
         {this._renderPopup()} */}
         </MapGL>
-        <div class="row">
+        <div className="row">
           <div style={{ textAlign: "center", padding: "1rem 0" }}>
             <svg
               id="Layer_1"

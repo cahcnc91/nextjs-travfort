@@ -72,7 +72,7 @@ export default function ServicesSection() {
               </ul>
             </div>
             <div>
-              <a href="#" className="btn btn-ghost">
+              <a href="#contato" className="btn btn-ghost">
                 Quero um Orçamento!
               </a>
             </div>
@@ -128,7 +128,7 @@ export default function ServicesSection() {
               </ul>
             </div>
             <div>
-              <a href="#" className="btn btn-full">
+              <a href="#contato" className="btn btn-full">
                 Quero!
               </a>
             </div>

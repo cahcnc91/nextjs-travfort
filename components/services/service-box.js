@@ -63,7 +63,7 @@ export default function ServiceBox() {
               </ul>
             </div>
             <div>
-              <a href="#" className="btn btn-ghost">
+              <a href="#contato" className="btn btn-ghost">
                 Quero um Orçamento!
               </a>
             </div>

@@ -99,6 +99,10 @@ p {
   line-height: 145%;
 }
 
+.relative {
+  position: relative;
+}
+
 /*  GRID COLUMN SETUP   ==================================================================== */
 
 .col {
@@ -113,16 +117,10 @@ p {
 
 /*MOBILE NAV */
 
-.mobile-nav-icon {
-  float: right;
-  margin-top: 30px;
-  cursor: pointer;
-  display: none;
-}
 
 .menu-icon {
   fill: #fff;
-  height: 50px;
+  height: 35px;
 }
 
 /* STICKY NAV*/
@@ -525,10 +523,6 @@ footer p:last-child {
 
   .main-nav {
     display: none;
-  }
-
-  .mobile-nav-icon {
-    display: inline-block;
   }
 
   .main-nav {

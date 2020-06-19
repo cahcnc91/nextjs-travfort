@@ -1,0 +1,71 @@
+/* MAIN NAV */
+.mainNav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+}
+
+.openMainNav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 70px;
+  top: 80px;
+  animation: fade-in 0.2s linear 1;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    right: -70px
+  }
+  to {
+    opacity: 1;
+    right: 70px;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    right: 70px }
+  to {
+    opacity: 0;
+    right: -70px;
+  }
+}
+
+.mainNavLi {
+  display: inline-block;
+  margin-left: 40px;
+  margin-bottom: 25px;
+}
+
+.mainNavA:link,
+.mainNavA:visited {
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+.mainNavA:hover,
+.mainNavA:active {
+  border-bottom: 2px solid #e67e22;
+}
+
+@media only screen and (max-width: 767px) {
+  .mainNav {
+    animation: fade-out 0.2s linear 1;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -150px;
+    top: 80px;
+    margin-top: 0;
+  }
+}
