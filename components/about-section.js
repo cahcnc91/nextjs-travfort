@@ -2,7 +2,7 @@ import styles from './about-section.module.css'
 
 export default function AboutSection() {
   return (
-    <section>
+    <section id="quemsomos">
       <div className="row">
         <h2>Segurança em primeiro lugar</h2>
         <p className={styles.p}>

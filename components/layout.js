@@ -12,7 +12,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Travfort alarmes é uma empresa especializada em segurança eletrônica, instalação de alarmes e câmeras, e monitoramento 24h "
         />
         <meta
           property="og:image"

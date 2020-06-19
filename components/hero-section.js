@@ -20,13 +20,16 @@ export default function HeroSection() {
             /> */}
             <ul className={styles.mainNav}>
               <li className={styles.mainNavLi}>
-                <a className={styles.mainNavA} href="#features">Quem somos</a>
+                <a className={styles.mainNavA} href="#quemsomos">Quem somos</a>
               </li>
               <li className={styles.mainNavLi}>
-                <a className={styles.mainNavA} href="#works">Serviços</a>
+                <a className={styles.mainNavA} href="#servicos">Serviços</a>
               </li>
               <li className={styles.mainNavLi}>
                 <a className={styles.mainNavA} href="#localizacao">Localização</a>
+              </li>
+              <li className={styles.mainNavLi}>
+                <a className={styles.mainNavA} href="#clientes">Clientes</a>
               </li>
               <li className={styles.mainNavLi}>
                 <a className={styles.mainNavA} href="#contato">Contato</a>

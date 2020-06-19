@@ -1,6 +1,6 @@
 export default function Clientes() {
   return (
-    <section className="section-testimonials">
+    <section className="section-testimonials" id="clientes">
       <div className="row">
         <h2>Nossos clientes</h2>
       </div>

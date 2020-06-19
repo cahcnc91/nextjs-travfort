@@ -2,7 +2,7 @@ import ServiceBox from "./service-box";
 
 export default function ServicesSection() {
   return (
-    <section className="section-plans js--section-plans" id="works">
+    <section className="section-plans js--section-plans" id="servicos">
       <div className="row">
         <h2>Serviços de Segurança Eletrônica</h2>
       </div>

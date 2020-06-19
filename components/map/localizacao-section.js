@@ -51,7 +51,10 @@ export default class LocalizacaoSection extends Component {
     const { viewport } = this.state;
 
     return (
-      <Fragment>
+      <section id="localizacao">
+        <div className="row">
+          <h2>NOSSA LOCALIZAÇÃO </h2>
+        </div>
         <MapGL
           {...viewport}
           width="100%"
@@ -67,7 +70,7 @@ export default class LocalizacaoSection extends Component {
         {this._renderPopup()} */}
         </MapGL>
         <div class="row">
-          <div style={{textAlign: 'center', padding: '1rem 0'}}>
+          <div style={{ textAlign: "center", padding: "1rem 0" }}>
             <svg
               id="Layer_1"
               class="icon-small"
@@ -83,7 +86,7 @@ export default class LocalizacaoSection extends Component {
             Santo André, SP
           </div>
         </div>
-      </Fragment>
+      </section>
     );
   }
 }
