@@ -40,6 +40,12 @@ export default function Clientes() {
               alt="Logo ortiz veiculos"
             />
           </a>
+          <a className="logo-clientes" href="http://iconacy.com.br/home" target="_blank">
+            <img
+              src="images/iconacy-logo.png"
+              alt="Logo Iconacy"
+            />
+          </a>
         </div>
       </div>
     </section>

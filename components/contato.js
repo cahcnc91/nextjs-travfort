@@ -2,8 +2,30 @@ import PersonIcon from "./icons/person";
 import PhoneIcon from "./icons/phone";
 import EmailIcon from "./icons/email";
 import CelphoneIcon from "./icons/celphone";
+import axios from "axios";
+import { useForm } from "./hooks/useForm";
 
 export default function ContatoSection() {
+  const [inputs, setChangeInputs] = useForm({
+    name: "",
+    email: "",
+    message: "",
+  });
+  async function getUser() {
+    try {
+      const response = await axios.post("/api/email", {
+        name: "cah",
+        email: 'camila@test.com',
+        message: 'test1'
+      });
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  getUser();
+
   return (
     <section id="contato">
       <div className="row">
@@ -55,6 +77,8 @@ export default function ContatoSection() {
                 id="name"
                 placeholder="Seu Nome"
                 required
+                value={inputs.name}
+                onChange={setChangeInputs}
               />
             </div>
             <div className="row">
@@ -62,13 +86,21 @@ export default function ContatoSection() {
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Seu email"
+                placeholder="Seu Email"
                 required
+                value={inputs.email}
+                onChange={setChangeInputs}
               />
             </div>
 
             <div className="row">
-              <textarea name="message" placeholder="Sua mensagem"></textarea>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Sua mensagem"
+                value={inputs.message}
+                onChange={setChangeInputs}
+              ></textarea>
             </div>
             <div className="row">
               <input type="submit" value="Enviar" />
