@@ -73,7 +73,7 @@ export default class LocalizacaoSection extends Component {
           <div style={{ textAlign: "center", padding: "1rem 0" }}>
             <svg
               id="Layer_1"
-              class="icon-small"
+              className="icon-small"
               viewBox="0 0 511.995 511.995"
               xmlns="http://www.w3.org/2000/svg"
             >

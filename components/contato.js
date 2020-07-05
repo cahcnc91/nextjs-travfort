@@ -3,28 +3,51 @@ import PhoneIcon from "./icons/phone";
 import EmailIcon from "./icons/email";
 import CelphoneIcon from "./icons/celphone";
 import axios from "axios";
-import { useForm } from "./hooks/useForm";
+import { useState } from "react";
 
 export default function ContatoSection() {
-  const [inputs, setChangeInputs] = useForm({
+  const [inputs, setInputs] = useState({
     name: "",
     email: "",
     message: "",
   });
-  async function getUser() {
-    try {
-      const response = await axios.post("/api/email", {
-        name: "cah",
-        email: 'camila@test.com',
-        message: 'test1'
-      });
-      console.log(response);
-    } catch (error) {
-      console.error(error);
-    }
+  const [emailSent, setEmailSent] = useState(false)
+
+  const setChangeInputs = (e) => {
+    setInputs({
+      ...inputs,
+      [e.target.name]: e.target.value
+    })
   }
 
-  getUser();
+  const submitForm = async (e) => {
+    e.preventDefault();
+
+    if(inputs.name && inputs.email && inputs.message){
+      try {
+        const response = await axios.post("/api/email", {
+          name: inputs.name,
+          email: inputs.email,
+          message: inputs.message
+        });
+
+        if(response.data.ok){
+          setEmailSent(true)
+          setInputs({
+            name: "",
+            email: "",
+            message: "",
+          })
+        }
+      } catch (error) {
+        console.error(error);
+      }
+
+    } else {
+      setError(true)
+    }
+
+  }
 
   return (
     <section id="contato">
@@ -68,8 +91,8 @@ export default function ContatoSection() {
             </div>
           </div>
         </div>
-        <div class="span-2-of-3">
-          <form method="post" action="#" className="contact-form">
+        <div className="span-2-of-3">
+          <form method="post" action="#" className="contact-form" onSubmit={submitForm}>
             <div className="row">
               <input
                 type="text"
@@ -100,11 +123,13 @@ export default function ContatoSection() {
                 placeholder="Sua mensagem"
                 value={inputs.message}
                 onChange={setChangeInputs}
+                required
               ></textarea>
             </div>
             <div className="row">
               <input type="submit" value="Enviar" />
             </div>
+            {emailSent && <p style={{paddingTop: '1rem'}}><b>* Seu email foi enviado com sucesso!</b></p>}
           </form>
         </div>
       </div>

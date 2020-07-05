@@ -3,8 +3,8 @@ const nodemailer = require("nodemailer");
 let transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.user,
-    pass: process.env.pass,
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
   },
 });
 
@@ -13,7 +13,7 @@ export default async (req, res) => {
     try {
       const info = await transporter.sendMail({
         from: `${req.body.name} <${req.body.email}>`, // sender address
-        to: "camilanierocosta@hotmail.com, travfort@ig.com.br", // list of receivers
+        to: "camilanierocosta@hotmail.com", // list of receivers
         subject: "Orcamento Travfort", // Subject line
         text: req.body.message, // plain text body
         html: req.body.message, // html body
