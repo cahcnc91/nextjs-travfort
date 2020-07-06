@@ -1,7 +1,6 @@
 import Head from "next/head";
-import HeroSection from "./hero-section";
 import Link from "next/link";
-import { Fragment } from "react";
+import { Fragment } from 'react';
 
 export const siteTitle = "Travfor Alarmes";
 
@@ -29,8 +28,7 @@ export default function Layout({ children, home }) {
         />
         <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
       </Head>
-      <HeroSection></HeroSection>
-      <main>{children}</main>
+      <main style={{position: 'relative'}}>{children}</main>
       {!home && (
         <div>
           <Link href="/">

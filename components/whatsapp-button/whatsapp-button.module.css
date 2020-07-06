@@ -1,0 +1,12 @@
+.whatsappButton {
+    position: fixed;
+    bottom: 0;
+    right: -70px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.whatsappButton:hover {
+  border-bottom: 2px solid transparent;
+  filter: brightness(85%);
+}
