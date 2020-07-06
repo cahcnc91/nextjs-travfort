@@ -129,7 +129,7 @@ export default function ContatoSection() {
             <div className="row">
               <input type="submit" value="Enviar" />
             </div>
-            {emailSent && <p style={{paddingTop: '1rem'}}><b>* Seu email foi enviado com sucesso!</b></p>}
+            {emailSent && <p style={{paddingTop: '1.5rem'}}><b>* Seu email foi enviado com sucesso!</b></p>}
           </form>
         </div>
       </div>
