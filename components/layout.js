@@ -9,6 +9,7 @@ export default function Layout({ children, home }) {
     <Fragment>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <title>Travfort Alarmes</title>
         <meta
           name="description"
           content="Travfort alarmes é uma empresa especializada em segurança eletrônica, instalação de alarmes e câmeras, e monitoramento 24h "
